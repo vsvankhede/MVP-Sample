@@ -68,7 +68,9 @@ dependencies {
 
     // Espresso UI Testing
     androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    androidTestCompile ("com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion")
+    androidTestCompile ("com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion") {
+        exclude group: 'com.android.support'
+    }
     androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
 
     // Resolve conflict between main and test apk
